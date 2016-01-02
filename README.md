@@ -1,0 +1,29 @@
+# django_lti
+
+With an empty new django (1.9/python 3.4.0 tested) project with migrations run and django sessions available
+
+git clone https://github.com/code137/django_lti.git lti into the existing django application
+
+Add lti to the list of INSTALLED_APPS in the main settings.py
+
+Disable XFrameOptionsMiddleware
+```python
+# 'django.middleware.clickjacking.XFrameOptionsMiddleware’, in MIDDLEWARE_CLASSES
+````
+Modify the main applications urls:
+
+```python
+from django.conf.urls import include, url
+from django.contrib import admin
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'^lti/', include('lti.urls')),
+]
+```
+
+Run the server and test on http://ltiapps.net/test/tc.php using the consumer key and secret against localhost.
+
+There are modified oauth and oauth2 libraries in the dependencies that were required after modfifying pylti to work with django 1.9 and python 3.4.0.
+
+It's a bit messy at the moment...
