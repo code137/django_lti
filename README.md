@@ -6,6 +6,8 @@ With an empty new django (1.9/python 3.4.0 tested) project with migrations run a
 
 git clone https://github.com/code137/django_lti.git lti into the existing django application
 
+pip install -r requirements.txt
+
 Add lti to the list of INSTALLED_APPS in the main settings.py
 
 Disable XFrameOptionsMiddleware
