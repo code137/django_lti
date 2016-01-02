@@ -1,5 +1,7 @@
 # django_lti
 
+Using pylti (built on flask) as a base I've converted it to run with a django decorator and modified oauth and oauth2 to work with python 3.4.0
+
 With an empty new django (1.9/python 3.4.0 tested) project with migrations run and django sessions available
 
 git clone https://github.com/code137/django_lti.git lti into the existing django application
