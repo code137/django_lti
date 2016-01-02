@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Add Problem</title>
+</head>
+<body>
+
+<form action="{% url 'grade' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+Index page for LTI tool. This page requires consumer key and secret to view.
+
+<html>
+<head>
+    <title>MIT LTI Flask Sample</title>
+</head>
+<body>
+<h1>Hello {{ lti.nickname }}.</h1>
+
+<p>You are an {{ lti.role }}</p>
+
+<div>
+    <a href="{% url 'add' %}">Start problem</a>
+    <br>
+    <a href="{% url 'instructor' %}">Start instructor page</a>
+     <br>
+    <a href="{% url 'staff' %}">Start staff page</a>
+</div>
+
+</body>
+</html>
